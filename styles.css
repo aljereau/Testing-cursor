@@ -150,7 +150,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('https://images.unsplash.com/photo-1499636136210-6f4ee915583e');
+    background-image: url('https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1600&q=80');
+    background-color: var(--color-charcoal); /* Fallback color */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -458,4 +459,102 @@ footer {
     .hero-content h1 {
         font-size: 3.5rem;
     }
+}
+
+/* Product Items */
+.product-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    height: 180px;
+    background-color: var(--color-light-gray);
+    background-size: cover;
+    background-position: center;
+}
+
+.product-item h4 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin: 1rem 1rem 0.5rem;
+    color: var(--color-charcoal);
+}
+
+.product-item p {
+    margin: 0 1rem 1rem;
+    color: var(--color-burgundy);
+    font-weight: 600;
+}
+
+/* Blog Posts */
+.blog-post {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+}
+
+.blog-image {
+    height: 200px;
+    background-color: var(--color-light-gray);
+    background-size: cover;
+    background-position: center;
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-charcoal);
+}
+
+.blog-date {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.blog-excerpt {
+    margin-bottom: 1rem;
+}
+
+.blog-link {
+    display: inline-block;
+    color: var(--color-burgundy);
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+}
+
+.blog-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-burgundy);
+    transition: width 0.3s ease;
+}
+
+.blog-link:hover::after {
+    width: 100%;
 } 
